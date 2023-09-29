@@ -3,11 +3,11 @@
 include_once __DIR__ . "/Models/Movie.php";
 include_once __DIR__ . "/Models/Genre.php";
 
-$movie_1 = new Movie("La Città Incantata", 2001, "JA", 10.00, new Genre("Fantasy"));
-$movie_2 = new Movie("Barbie", 2023, "EN", 8.5, new Genre("Commedy"));
+$movie_1 = new Movie("La Città Incantata", 2001, "JA", 10.00, new Genre(["Fantasy", "Adventure", "Animation"]));
+$movie_2 = new Movie("Barbie", 2023, "EN", 8.5, new Genre(["Commedy", "Drama", "Fiction"]));
 
 var_dump($movie_1, $movie_2);
-var_dump($movie_1->genre->genre_name, $movie_2->genre->genre_name)
+var_dump($movie_1->genre->genre_list, $movie_2->genre->genre_list)
 
 ?>
 

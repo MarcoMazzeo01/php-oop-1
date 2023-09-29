@@ -2,10 +2,10 @@
 
 class Genre
 {
-    public $genre_name;
+    public $genre_list;
 
-    function __construct(string $genre_name)
+    function __construct(array $genres)
     {
-        $this->genre_name = $genre_name;
+        $this->genre_list = $genres;
     }
 }
