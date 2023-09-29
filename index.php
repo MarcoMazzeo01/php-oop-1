@@ -3,8 +3,8 @@
 include __DIR__ . "/Models/movie.php";
 include __DIR__ . "/Models/genre.php";
 
-$movie_1 = new Movie("La Città Incantata", 2001, "JA", 10.00);
-$movie_2 = new Movie("Barbie", 2023, "EN", 8.5);
+$movie_1 = new Movie("La Città Incantata", 2001, "JA", 10.00, new Genre("Fantasy"));
+$movie_2 = new Movie("Barbie", 2023, "EN", 8.5, new Genre("Commedy"));
 
 var_dump($movie_1, $movie_2);
 
