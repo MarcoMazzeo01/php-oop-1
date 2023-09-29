@@ -1,5 +1,7 @@
 <?php
 
+include_once "./Genre.php";
+
 class Movie
 {
     public $title;
