@@ -4,14 +4,10 @@ include_once __DIR__ . "/Models/Movie.php";
 include_once __DIR__ . "/Models/Genre.php";
 include_once __DIR__ . "/Models/Production.php";
 
-$movie_1 = new Movie("La Città Incantata", 2001, "JA", 10.00, new Genre(["Fantasy", "Adventure", "Animation"]));
-$movie_2 = new Movie("Barbie", 2023, "EN", 8.5, new Genre(["Commedy", "Drama", "Fiction"]));
+$movie_1 = new Movie("La Città Incantata", "Hayao Miyazaki", "JP", "10", new Genre(["Fantasy", "Adventure"]), 2001, 125);
 
-$prod = new Production("Test", "Raffaella Carrà", "IT");
-var_dump($prod);
 
-var_dump($movie_1, $movie_2);
-var_dump($movie_1->genre->genre_list, $movie_2->genre->genre_list)
+var_dump($movie_1);
 
 ?>
 
@@ -35,11 +31,6 @@ var_dump($movie_1->genre->genre_list, $movie_2->genre->genre_list)
                     ?>
                 </li>
 
-                <li>
-                    <?php
-                    echo "<b>{$movie_2->title}: </b> {$movie_2->getStarRating()} &#9733";
-                    ?>
-                </li>
             </ol>
         </div>
     </main>

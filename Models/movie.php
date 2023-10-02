@@ -1,26 +1,26 @@
 <?php
 
 include_once __DIR__ . "/Genre.php";
+include_once __DIR__ . "/Production.php";
 
-class Movie
+class Movie extends Production
 {
-    public $title;
-    public $release;
-    public $language;
-    public $rating;
-    public $genre;
 
-    function __construct(string $title, int $release, string $lang, float $rating, Genre $genre_name)
-    {
-        $this->title = $title;
-        $this->release = $release;
-        $this->language = $lang;
-        $this->rating = $rating;
-        $this->genre = $genre_name;
-    }
+    public $published_year;
+    public $duration;
 
-    public function getStarRating()
-    {
-        return round($this->rating / 2, 2);
+    function __construct(
+        string $title,
+        string $producer,
+        string $language,
+        float $rating,
+        Genre $genre,
+        int $published_year,
+        float $duration,
+    ) {
+
+        parent::__construct($title, $producer, $language, $rating, $genre);
+        $this->published_year = $published_year;
+        $this->duration = $duration;
     }
 }
