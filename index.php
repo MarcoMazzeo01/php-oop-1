@@ -3,9 +3,9 @@
 include_once __DIR__ . "/Models/Movie.php";
 include_once __DIR__ . "/Models/Genre.php";
 include_once __DIR__ . "/Models/Production.php";
+include_once __DIR__ . "/Models/TvSerie.php";
 
 $movie_1 = new Movie("La Città Incantata", "Hayao Miyazaki", "JP", "10", new Genre(["Fantasy", "Adventure"]), 2001, 125);
-
 
 var_dump($movie_1);
 
